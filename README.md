@@ -1,15 +1,15 @@
-# Community Edition of the Matatika Platform (Beta!)
+# Community Edition of the Meltano Platform (Beta!)
 
-Maintained by: [Matatika](https://www.matatika.com/)
+Maintained by: [Meltano](https://www.meltano.com/)
 
-[Documentation](https://www.matatika.com/docs/) and [API reference](https://www.matatika.com/docs/api/)
+[Documentation](https://www.meltano.com/docs/) and [API reference](https://www.meltano.com/docs/api/)
 
 Where to get help: the [Matatika Community Slack](https://join.slack.com/t/matatika/shared_invite/zt-19n1bfokx-F31DNitTpSxWCFO2aFlgxg)
 
 
-## What is Matatika Community Edition?
+## What is Meltano Community Edition?
 
-[Matatika](https://www.matatika.com/) is a cloud-native data platform with CLI, API, and UI access for all.  We have integrated dbt, Meltano, and other open source technologies into a ready-to-run modern data stack.  [Read more](https://www.matatika.com/docs/concepts). 
+[Meltano](https://www.meltano.com/) is a cloud-native data platform with CLI, API, and UI access for all.  We have integrated dbt, Meltano, and other open source technologies into a ready-to-run modern data stack.  [Read more](https://www.meltano.com/docs/concepts). 
 
 This Community Edition is an all in one docker compose solution, and has been provided to help companies run their own solution where BOTH data engineers manage everything as code and data analysts manage data through a UI.
 
@@ -57,5 +57,5 @@ By installing this package you agree to the terms of our [community license](htt
 
    Create new datasets in `[your-workspace]/analyze/datasets`
 
-## Running Matatika-CE in cloud
-Checkout our guide to running Matatika CE on a VM in your cloud [here](./cloud_config#readme).
+## Running Meltano-CE in cloud
+Checkout our guide to running Meltano CE on a VM in your cloud [here](./cloud_config#readme).
