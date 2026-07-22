@@ -12,5 +12,5 @@ endif
 	@sed -Ei -e 's/(image: matatika\/(catalog|app)).*/\1:$(VERSION)/g' docker-compose.yml
 
 full-update: update ## Update, commit changes and tag
-	@git commit -m 'Update image tags to `$(VERSION)`' docker-compose.yml
-	@git tag '$(VERSION)'
+	@git add docker-compose.yml; git diff-index --quiet HEAD -- docker-compose.yml || git commit -m 'Update image tags to `$(VERSION)`' docker-compose.yml
+	@git rev-parse --verify --quiet 'refs/tags/$(VERSION)' > /dev/null || git tag '$(VERSION)'
