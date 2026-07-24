@@ -9,7 +9,7 @@ ifndef VERSION
 	$(error VERSION is not set)
 endif
 
-	@sed -Ei -e 's/(matatika\/(catalog|app):)(\w|\.)*/\1$(VERSION)/g' docker-compose.yml
+	@sed -Ei -e 's/(matatika\/catalog:)(\w|\.)*/\1$(VERSION)/g' docker-compose.yml
 
 full-update: update ## Update, commit changes and tag
 	@git add docker-compose.yml; git diff-index --quiet HEAD -- docker-compose.yml || git commit -m 'Update image tags to `$(VERSION)`' docker-compose.yml
