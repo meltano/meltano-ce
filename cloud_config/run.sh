@@ -3,7 +3,7 @@ cat .env.app.cloud >> ../config/.env.app
 cat .env.catalog.cloud >> ../config/.env.catalog
 
 #run docker compose command
-echo Starting Matatika-CE in Docker...
+echo Starting Meltano-CE in Docker...
 export userID=$(id -u); export groupID=$(id -g)
 docker compose -f ../docker-compose.yml up --detach
 

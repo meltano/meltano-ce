@@ -1,6 +1,6 @@
-## How to deploy Matatika CE to a VM in cloud with custom DNS names
+## How to deploy Meltano CE to a VM in cloud with custom DNS names
 
-This directory contains the extra files required to deploy Matatika CE into the cloud or as a server.  (i.e. where the application is accessible from outside the server deployment. Not in localhost)
+This directory contains the extra files required to deploy Meltano CE into the cloud or as a server.  (i.e. where the application is accessible from outside the server deployment. Not in localhost)
 
 - `app_certificate/privkey.pem`  : the private key for your certificate. - for the application
 - `app_certificate/fullchain.pem`: the certificate file used in most server software.  - for the application
@@ -19,7 +19,7 @@ Presequisite:
 3. Edit the variables in **.env.app.cloud** file (see comments inside the file)
 4. Edit the variables in **.env.catalog.cloud** file (see comments inside the file)
 5. If you are using your own Auth0 Identity Provider please see the comments in file ../config/.env.catalog. Lines number 4 and 5 needs to be updated.
-6. Edit run.sh file `<fullpath>` for the nginx configuration file needs to be added. Nginx needs to point to this configuration file, and full path is required. This shell script will copy the cloud configuration files to be loaded by docker compose, start the Matatika CE and finally start the nginx.
+6. Edit run.sh file `<fullpath>` for the nginx configuration file needs to be added. Nginx needs to point to this configuration file, and full path is required. This shell script will copy the cloud configuration files to be loaded by docker compose, start the Meltano CE and finally start the nginx.
 7. Run the run.sh file.
 
 ## Quick guide
@@ -32,4 +32,4 @@ This is the same as above, but into more summary
     - `<catalog_dns_name>` to be replaced with catalog DNS name
     - `<auth0_client_id>` - Auth0 client id - Please refer to this: https://www.matatika.com/docs/getting-started/community-edition#specify-a-custom-auth0-identity-provider on how to configure auth0 with your organization, but instead **localhost:port** you should use https://`<app_dns_name>` and https://`<catalog_dns_name>`/api. Please see the comments in file ../config/.env.catalog. Lines number 4 and 5 needs to be updated.
     - `<auth0_databse_connection>` - Auth0 database
-    - change `APP_IDENTITY_DOMAIN` value in **.env.app.cloud** file if you are not using Matatika Auth0 Identity Provider.
+    - change `APP_IDENTITY_DOMAIN` value in **.env.app.cloud** file if you are not using Meltano Auth0 Identity Provider.
