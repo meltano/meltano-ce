@@ -1,7 +1,7 @@
 services:
   catalog:
     user: $userID:$groupID
-    image: ${CATALOG_IMAGE:-matatika/catalog:v0.65.0}
+    image: ${CATALOG_IMAGE:-matatika/catalog:v0.66.0}
     ports:
       - "8080:8080"
       - "8443:8443"
